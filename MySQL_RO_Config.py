@@ -1,0 +1,5 @@
+host="spaceplanning.cluster-cenwssqguqtm.us-east-2.rds.amazonaws.com"
+port="3306"
+user="dvoruga"
+passwd="prl9WufUvEg5"
+database="Spaceman"

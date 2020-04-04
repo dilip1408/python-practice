@@ -1,0 +1,11 @@
+gen_ksn_points_join = df.loc[(df['burn_amt'].notnull())] -- select * from df where burn_amt is not null; # This returns True against '0' is NOT found else False.
+gen_ksn_points_join = df.loc[(df['burn_amt'].isnull())] -- select * from df where burn_amt is null;# This returns True against '0' is FOUND else False.
+query = dfpo.loc[(dfpo['season_code'] == 1) & (dfpo['seas_yr_nbr'] == 0)] = select * from dfpo where season_code= 1 and seas_yr_nbr = 0;
+
+grouped = LOAD_PAT_FILE1.groupby(['sub_id'],sort='week') - group by and sort
+
+#to get the type of an object #whether it is dataframe or series etc..
+print(type(depth))
+
+# to display more than one columsn from a dataframe
+print(graph[['OFR_ID','wk_no']])
