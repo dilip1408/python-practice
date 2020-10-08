@@ -1,8 +1,8 @@
-# nums = [1,2,3]
+nums = [1,2,3]
 # print(dir(nums))
-# i_nums = iter(nums)
-# print(dir(i_nums))
-# print(type(i_nums))
+i_nums = iter(nums)
+print(dir(i_nums))
+print(type(i_nums))
 # print(i_nums)
 # print(next(i_nums))
 # print(next(i_nums))

@@ -559,14 +559,22 @@ l = [i for i in l if i !=7]
 # mainval = [4,5,6]
 # print(reassign(mainval))
 
-a=10
-def display():
-    b=20
-    print("global variable", a)
-    print("local variable", b)
+# a=10
+# def display():
+#     b=20
+#     print("global variable", a)
+#     print("local variable", b)
+#
+# display()
+# c=30
+# print("global variable", a)
+# # print("local variable", b)
+# print(c)
 
-display()
-c=30
-print("global variable", a)
-# print("local variable", b)
-print(c)
+Omkar = {'key': 'Omkar', 'name': 'Omkar Pathak', 'age': 21, 'pay': 40000}
+Jagdish = {'key': 'Jagdish', 'name': 'Jagdish Pathak','age': 50, 'pay': 50000}
+
+for k in Omkar.items():
+    print(type(k))
+
+print(type(Omkar.items()))

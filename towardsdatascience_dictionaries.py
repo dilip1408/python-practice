@@ -1,4 +1,8 @@
 # https://towardsdatascience.com/15-things-you-should-know-about-dictionaries-in-python-44c55e75405c
+''' 1. What is a Python dictionary?
+A dictionary is an unordered and mutable Python container that stores mappings of unique keys to values. Dictionaries are written with curly brackets ({}), including key-value pairs separated by commas (,). A colon (:) separates each key from its value.
+Three dictionaries are shown below, containing the population of the 5 largest German cities, list of products, and student’s grades.
+'''
 # dictionary containing the population of the 5 largest german cities
 population = {'Berlin': 3748148, 'Hamburg': 1822445, 'Munich': 1471508, 'Cologne': 1085664, 'Frankfurt': 753056 }
 
@@ -8,6 +12,12 @@ products = {'table': 120, 'chair': 40, 'lamp': 14, 'bed': 250, 'mattress': 100}
 # dictionary containing students grades
 grades = {'Alba': 9.5, 'Eduardo': 10, 'Normando': 3.5, 'Helena': 6.5, 'Claudia': 7.5}
 
+'''
+2. Create a dictionary with dict() constructor
+Dictionaries can also be created with the built-in function dict(**kwarg). This function takes an arbitrary number of keywords arguments (arguments preceded by an identifier kwarg=value) as input, returning None.
+We can also create a dictionary using another dictionary in combination with keyword arguments (dict(mapping, **kwarg)) as follows:
+Alternatively, we can construct a dictionary using an iterable (e.g. list of tuples). Each tuple must contain two objects. The first object becomes the key and the second becomes the value of the dictionary.
+'''
 # create a dictionary with dict() function using keyword arguments # Notice the input was not given in the format of dictionary.. the dict constructor will transform it dictionary format.
 # dictionary - ages of students
 students_ages = dict(Amanda=27, Teresa=38, Paula=17, Mario=40)
@@ -260,7 +270,7 @@ for student, grade in grades.items():
         min_student = student
         min_grade = grade
 
-print(min_student)
+print("LOwest test score",min_student)
 # Normando
 
 '''
@@ -454,4 +464,3 @@ df_2 = pd.DataFrame([{'name': 'Mario', 'age': 22, 'grades':9},
                      {'name': 'Paula', 'age': 19, 'grades':7}], index=['student_1', 'student_2', 'student_3'])
 
 print(df_2)
-

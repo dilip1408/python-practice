@@ -110,6 +110,15 @@ print(res2)
 res2 = pd.concat([df, df1], axis=1) # By default union will be applied
 print(res2)
 
-res3 = pd.concat([df, df1], axis=1,join_axes=[df.index]) # The index which is matching in df1 will be pulled. join_axes is deprecated
-print(res3)
-pd.
+# res3 = pd.concat([df, df1], axis=1,join_axes=[df.index]) # The index which is matching in df1 will be pulled. join_axes is deprecated
+# print(res3)
+
+
+#Test for replacig with a different string in ONLY ONE COLUMN---
+data11 = {'a':['Exist', 'Both', 'Modified'],
+        'b':['tts', 'tst', 'tss']}
+
+dat = pd.DataFrame(data11)
+dat['a'] = dat.apply(lambda x: x['a'].replace('Exist','Modified'), axis=1)
+print(dat)
+#Test for replacig with a different string in ONLY ONE COLUMN---End

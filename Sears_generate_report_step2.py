@@ -75,8 +75,10 @@ graph['exp'] = pd.to_numeric(graph['tg_units']) * pd.to_numeric(graph['l3w_ratio
 #graph['exp'] = (graph['tg_units']) * (graph['l3w_ratio'])
 #exp<-graph[wk_no== top_wk][,c('OFR_ID','exp','std_units','ini_pro'),with=F]
 exp = graph.loc[(graph['wk_no'] == top_wk), ['OFR_ID','exp','std_units','ini_pro']]
-
+print("exp...before join:::::::::::\n",exp)
+print("depth... before join::::::::::\n",depth)
 exp = pd.merge(exp,depth,on='OFR_ID', how='left')
+print("exp...after join::::::::::::::\n",exp)
 #exp[,sellthru:=std_units/ini_pro]
 exp['sellthru'] = exp['std_units'] / exp['ini_pro']
 #exp<-exp[!is.na(exp)]

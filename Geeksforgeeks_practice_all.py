@@ -62,7 +62,7 @@
 # v=[]
 # for i,j in dictionary.items():
 #     k.append(i)
-#     v.append(j)
+#     v.append(j)ope
 #
 # print("keys::",k)
 # print("Values::",v)
@@ -94,6 +94,20 @@
 # n,r,m = list(zip(*m))
 # print(n,r,m)
 
+#prime number check for a specified value
+num = 7
+if (num > 1):
+    for i in range(2, num):
+        if (num % i == 0):
+            print("From IF condition: i value ==> ", i, "and num is => ", num)
+
+        else:
+            print("i value ==> ", i, " and num is => ", num)
+            print(num," is a prime number")
+
+
+
+
 # # Print all prime numbers in an interval
 # start = 11
 # end= 25
@@ -113,9 +127,9 @@
 # print(id(x))
 
 # ##break,pass,continue condition####3
-from builtins import range
-
-text = "Dilip"
+# from builtins import range
+#
+# text = "Dilip"
 # for i in text:
 #     # print(i)
 #     if(i == "i" or i=="l"):

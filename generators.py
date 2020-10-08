@@ -12,28 +12,30 @@ import random
 # for num in my_nums:
 #     print(num)
 
-names = ['Dilip','corey','adam','steve','rick','thomas']
+names = ['Dilip','Voruganti','corey','adam','steve','rick','thomas']
 
 print('memory (Before):{}Mb'.format(memory_profiler.memory_usage()))
 
+
 def people_list(num_people):
-    result = []
+    result =[]
     for i in range(num_people):
         person = {
-            'id': i, 'names': random.choice(names)
+            'id':i,'name':random.choice(names)
         }
         result.append(person)
     return result
 
+
 people = people_list(10)
 
-def people_generator(num_people):
-    for i in range(num_people):
-        person = {
-            'id':i,'names':random.choice(names)
-        }
-        yield person
-#print(people)
+# def people_generator(num_people):
+#     for i in range(num_people):
+#         person = {
+#             'id':i,'names':random.choice(names)
+#         }
+#         yield person
+print(people)
 
 
 # for items in people:
@@ -41,7 +43,7 @@ def people_generator(num_people):
 
 t1 = time.process_time()
 print(t1)
-people = people_generator(1000)
+# people = people_generator(1000)
 # people = people_list(1000000)
 t2 = time.process_time()
 print(t2)
